@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+body.dark {
+  --text: #f9f7f7;
+  --main2: #181924;
+  --main1: #25273d;
+}
+
+body.dark .todo,
+body.dark form,
+body.dark .todo-list-container {
+  --main1: #25273d;
+  --box-shadow: 1px 1px 7px rgb(34, 34, 34);
+}
+
+body.dark .todo {
+  border-bottom: 1px solid #4d5066;
+}
+
+body.dark .todo-filter.mobile {
+  --main1: #25273d;
+  background: var(--main1);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  --text: #151515;
+  --main1: hsl(0, 0%, 98%);
+  --main2: hsl(236, 33%, 92%);
+  --transition: all 0.5s ease;
+  font-family: "Josefin Sans", sans-serif;
+  background: var(--main2);
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  height: 100%;
+  min-height: 100vh;
+  font-weight: 400;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+}
+
+.background {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  height: 30vh;
+  width: 100%;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+main {
+  position: relative;
+  width: 50%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 5rem 0;
+  min-height: 90vh;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+}
+
+header img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex > li,
+.flex > p {
+  padding: 1rem;
+}
+
+form,
+.todo {
+  width: 100%;
+  background: var(--main1);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: left;
+  padding: 0 2rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+form input,
+.todo input {
+  padding: 2rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: var(--text);
+  background: transparent;
+}
+
+form input::-webkit-input-placeholder,
+.todo input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+form input:-ms-input-placeholder,
+.todo input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+form input::-ms-input-placeholder,
+.todo input::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+form input::placeholder,
+.todo input::placeholder {
+  opacity: 0.5;
+}
+
+.round {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 1px solid #d2d3db;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: relative;
+  cursor: pointer;
+}
+
+.round:hover {
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#57ddff), to(#c058f3));
+  background: linear-gradient(to right, #57ddff, #c058f3);
+}
+
+.round:hover::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  left: 2px;
+  bottom: 2px;
+  background: #fafafa;
+  border-radius: 50%;
+}
+
+.todo-list-container {
+  --box-shadow: 1px 1px 7px rgb(220, 220, 220);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: var(--main1);
+  border-radius: 5px;
+  margin: 2rem auto;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+
+.todo-list-container .todo-list {
+  width: 100%;
+}
+
+.todo-list-container .todo {
+  border-bottom: 1px solid var(--main2);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.todo-list-container .todo p {
+  padding: 3rem;
+  line-height: 100%;
+  width: 100%;
+}
+
+.todo-list-container .todo .cross {
+  opacity: 0;
+  margin-left: auto;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.todo-list-container .todo:hover .cross {
+  opacity: 1;
+}
+
+.todo-list-container .todo.completed p {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.todo-list-container .todo.completed .round {
+  background: -webkit-gradient(linear, left top, right top, from(#57ddff), to(#c058f3));
+  background: linear-gradient(to right, #57ddff, #c058f3);
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo-list-container .todo.completed .round::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: white;
+  content: "\f00c";
+}
+
+.info-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 2rem;
+  color: #9394a5;
+  font-size: 1.8rem;
+}
+
+.info-section li {
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.info-section li:hover {
+  color: var(--text);
+}
+
+.info-section li.selected {
+  color: #3a7bfd;
+}
+
+.info-section .clear,
+.info-section .items-left {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.todo-filter.mobile {
+  background: var(--main1);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+.todo-filter.mobile li {
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.todo-filter.mobile li:hover {
+  color: var(--text);
+}
+
+.todo-filter.mobile li.selected {
+  color: #3a7bfd;
+}
+
+.drag-drop {
+  text-align: center;
+  padding: 5rem;
+  font-size: 1rem;
+  color: #9394a5;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.mobile {
+  display: none;
+}
+
+footer {
+  background: var(--main1);
+  color: var(--text);
+}
+
+footer .container {
+  padding: 1rem;
+  min-height: 10vh;
+  max-width: 1000px;
+  width: 50%;
+  margin: auto;
+}
+
+footer .container a:hover {
+  color: #3a7bfd;
+}
+
+footer .container .source,
+footer .container .author,
+footer .container .links {
+  padding: 1rem;
+}
+
+footer .container .source a {
+  text-decoration: underline;
+}
+
+footer .container .fab {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+footer .container .tiret {
+  padding: 1rem;
+}
+
+@media (max-width: 1080px) {
+  main,
+  .container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+  main {
+    width: 90%;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+  }
+  .tiret {
+    display: none;
+  }
+}
