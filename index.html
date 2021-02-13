@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f3e2209c65.js" crossorigin="anonymous"></script>
+    <script defer src="app.js" type="module"></script>
+    <title>Modern Todo App</title>
+</head>
+
+<body>
+    <img src="img/bg-desktop-light.jpg" class="background desktop" alt="background image"></img>
+    <img src="img/bg-mobile-light.jpg" class="background mobile" alt="background image"></img>
+    <main>
+        <header>
+            <h1>TODO</h1>
+            <img src="img/icon-moon.svg" class="theme-toggle-btn" alt="moon">
+        </header>
+        <form action="">
+            <div class="round"></div>
+            <input type="text" name="name" class="todo-input" placeholder="Create a new todo..">
+            <input type="submit" name="submit" style="position: absolute; left: -9999px" />
+        </form>
+        <div class="todo-list-container">
+            <ul class="todo-list"></ul>
+            <div class="info-section desktop">
+                <div class="items-left">items left</div>
+                <ul class="todo-filter flex">
+                    <li class="all selected">All</li>
+                    <li class="active">Active</li>
+                    <li class="completed">Completed</li>
+                </ul>
+                <div class="clear">clear complete</div>
+            </div>
+            <div class="info-section mobile">
+                <div class="items-left">items left</div>
+                <div class="clear">clear complete</div>
+            </div>
+        </div>
+        <ul class="todo-filter flex mobile">
+            <li class="all selected">All</li>
+            <li class="active">Active</li>
+            <li class="completed">Completed</li>
+        </ul>
+        <div class="drag-drop">
+            <p>Drag and drop to reorder list</p>
+        </div>
+    </main>
+    <footer>
+        <div class="container flex">
+            <div class="source">
+                Check Source Code
+                <a href="https://github.com/mathieufontaine/js-modern-todo-list-app" target="_blank">here</a>
+            </div>
+            <div class="tiret"> - </div>
+            <div class="author">
+                Developped by
+                <a href="www.mathieufontaine.dev" target="_blank"><strong>Mathieu Fontaine</strong></a>
+            </div>
+            <div class="tiret"> - </div>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/mathieu-fontaine/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/mathieufontaine/" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
